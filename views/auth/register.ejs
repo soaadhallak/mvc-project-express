@@ -1,0 +1,20 @@
+<%- include("../partials/header") %>
+<h1>Register</h1>
+<form action="/register" method="POST">
+    <% if (errors?.name) { %>
+        <p style="color: red;"><%= errors.name %></p>
+    <% } %>
+    <input type="text" name="name" placeholder="name" required value="<%= old?.name || '' %>">
+    <% if (errors?.email) { %>
+        <p style="color: red;"><%= errors.email %></p>
+    <% } %>
+    <input type="email" name="email" placeholder="email" required value="<%= old?.email || '' %>">
+    <% if (errors?.password) { %>
+        <p style="color: red;"><%= errors.password %></p>
+    <% } %>
+    <input type="password" name="password" placeholder="password" required >
+    <button type="submit">Register</button>
+</form>
+
+<a href="/login">Login</a>
+<%- include("../partials/footer") %>
