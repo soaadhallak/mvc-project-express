@@ -33,11 +33,13 @@ jobs:
 
           config.model: "openrouter/deepseek/deepseek-chat"
 
-          config.fallback_models: '["openrouter/google/gemini-2.0-flash-lite"]'
+          config.fallback_models: '["openrouter/google/gemini-2.0-flash-lite","openrouter/google/gemini-2.0-flash-lite"]'
 
           config.custom_model_max_tokens: "8192"
 
           config.reasoning_effort: "none"
+
+          config.temperature: "0.1"
 
           github_action_config.auto_review: "true"
 
