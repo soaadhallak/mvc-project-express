@@ -29,11 +29,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          GOOGLE_AI_STUDIO.GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
-          config.model: "gemini/gemini-2.5-flash"
+          config.model: "openrouter/deepseek/deepseek-chat"
 
-          config.fallback_models: '["gemini/gemini-2.5-flash"]'
+          config.fallback_models: '["openrouter/google/gemini-2.0-flash-lite"]'
+
+          config.reasoning_effort: "none"
 
           github_action_config.auto_review: "true"
 
