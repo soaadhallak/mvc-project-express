@@ -31,9 +31,9 @@ jobs:
 
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
-          config.model: "openrouter/deepseek/deepseek-chat"
+          config.model: "openrouter/qwen/qwen-2.5-coder-32b-instruct"
 
-          config.fallback_models: '["openrouter/google/gemini-2.0-flash-lite"]'
+          config.fallback_models: '["openrouter/deepseek/deepseek-chat"]'
 
           config.custom_model_max_tokens: "8192"
 
